@@ -11,7 +11,6 @@ public with sharing class questionController {
         return [
             SELECT Name, Question__c, Country__c, Region__c FROM Query__c
             WHERE Region__c =:regionKey
-            LIMIT 3
         ];
     }
     // @AuraEnabled(cacheable=true)
