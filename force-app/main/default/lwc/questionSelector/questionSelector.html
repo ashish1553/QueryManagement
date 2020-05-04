@@ -1,5 +1,5 @@
 <template>
-<lightning-card class="c-container" title="Query Selector" icon-name="standard:search">
+    <lightning-card class="c-container" title="Query Selector" icon-name="standard:search">
         <lightning-layout multiple-rows="true">
             <lightning-layout-item padding="around-small" size="12">
                 <lightning-layout>
@@ -7,10 +7,14 @@
                         <c-search-ques onsearch={handleData}></c-search-ques>
                     </lightning-layout-item>
                     <lightning-layout-item padding="around-small" size="8">
-                        <c-search-functionality country-value={countryValue} region-value={regionValue}></c-search-functionality>
+
+                        <div id="dataTable" style="height: 300px;">
+                            <lightning-datatable key-field="id" data={values} columns={columns}>
+                            </lightning-datatable>
+                        </div>
                     </lightning-layout-item>
                 </lightning-layout>
             </lightning-layout-item>
         </lightning-layout>
-</lightning-card>
+    </lightning-card>
 </template>
