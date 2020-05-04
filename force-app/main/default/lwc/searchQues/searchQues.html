@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Search Query">
+        <div class="slds-m-around_small">
+            <lightning-combobox
+            name="country"
+            label="Country"
+            value={countryValue}
+            placeholder="Select Country"
+            options={countryOptions}
+            onchange={handleChangeCountry} >
+            </lightning-combobox>
+            <lightning-combobox
+            name="region"
+            label="Region"
+            value={regionValue}
+            placeholder="Select Region"
+            options={regionOptions}
+            onchange={handleChangeRegion} >
+            </lightning-combobox>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+
+    </lightning-card>
+</template>

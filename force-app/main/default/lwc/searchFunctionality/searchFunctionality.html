@@ -1,0 +1,21 @@
+<template>
+        <p>Selected Country is: {countryValue}</p>
+        <p>Selected Region is: {regionValue}</p>
+
+        <lightning-button variant="brand" label="Show" title="Primary action" onclick={doSearch} class="slds-m-left_x-small"></lightning-button>
+
+        <div id="dataTable" style="height: 300px;">
+                <lightning-datatable
+                key-field="id"
+                data={values}
+                columns={columns}>
+                </lightning-datatable>
+        </div> 
+
+
+        <!-- <template if:true={values}>
+                <template for:each={values} for:item="value">
+                    <p key={value.Id}>{value.Name}: {value.Question__c}</p>
+                </template>
+        </template> -->
+</template>
